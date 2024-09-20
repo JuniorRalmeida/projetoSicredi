@@ -1,0 +1,97 @@
+/* =================================== */
+/* Estilos para o Body e Container     */
+/* =================================== */
+
+body {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: #f0f0f0;
+    margin: 0; /* Remove margem padrão */
+}
+
+/* =================================== */
+/* Estilos para os Botões             */
+/* =================================== */
+
+.button-container {
+    display: flex; /* Alinha as divs lado a lado */
+    justify-content: center; /* Centraliza as divs dentro do container */
+    margin: 80px 0; /* Espaço acima e abaixo das divs */
+}
+
+.button {
+    width: 150px; /* Largura dos botões */
+    height: 50px; /* Altura dos botões */
+    margin: 0 10px; /* Margem lateral para espaçamento entre botões */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Tamanho da fonte */
+    color: white;
+    border-radius: 5px; /* Arredondamento das bordas */
+    cursor: pointer;
+    background-color: #4CAF50; /* Cor padrão dos botões */
+    transition: background-color 0.3s, transform 0.1s;
+    user-select: none; /* Impede a seleção do texto */
+}
+
+.button:hover {
+    background-color: #388E3C; /* Cor ao passar o mouse */
+}
+
+.button:active {
+    transform: scale(0.95); /* Efeito de clique */
+}
+
+/* =================================== */
+/* Estilos para o Input               */
+/* =================================== */
+
+input {
+    width: 80%; /* Largura original */
+    height: 50px; /* Aumentar a altura */
+    padding: 0 15px; /* Aumentar o espaço interno */
+    font-size: 1.1rem; /* Aumentar o tamanho da fonte */
+    border: 2px solid #ccc; /* Aumentar a espessura da borda */
+    border-radius: 8px; /* Aumentar o arredondamento das bordas */
+    outline: none; /* Remove o contorno padrão */
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.1s; /* Transições suaves */
+    margin-top: -30px; /* Distância negativa para aproximar do botão */
+}
+
+input:focus {
+    border-color: #4CAF50; /* Cor da borda ao focar */
+    background-color: rgba(76, 175, 80, 0.2); /* Fundo verde claro ao focar */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Brilho ao focar */
+}
+
+input:active {
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+/* =================================== */
+/* Estilos para a Div de Resultados    */
+/* =================================== */
+
+#resultados {
+    width: 80%; /* Largura da caixa */
+    margin-top: 20px; /* Espaço acima da caixa */
+    display: flex; /* Usar flexbox para alinhar as caixas */
+    flex-direction: column; /* Alinha as divs em coluna */
+}
+
+.resultado {
+    padding: 15px; /* Espaço interno */
+    border: 2px solid #4CAF50; /* Borda verde */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #ffffff; /* Fundo branco */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    margin-bottom: 10px; /* Espaço entre as caixas */
+    transition: transform 0.1s ease; /* Transição mais suave */
+}
+
+.resultado.clicado {
+    transform: scale(0.98); /* Efeito de clique mais sutil */
+    transition: transform 0.1s ease; /* Transição suave ao retornar ao tamanho original */
+}
