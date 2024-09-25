@@ -11,3 +11,4 @@ scriptsSalvos = [
 "joao",
 "Juca"
 ]
+ 
