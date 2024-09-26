@@ -11,6 +11,26 @@ body {
 }
 
 /* =================================== */
+/* Estilos para o Header              */
+/* =================================== */
+
+header {
+    display: flex;
+    justify-content: flex-end; /* Alinha à direita */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #4CAF50; /* Cor verde comercial */
+    width: 100%; /* Largura total */
+    position: relative;
+}
+
+.config-icon {
+    font-size: 24px; /* Tamanho do ícone */
+    cursor: pointer; /* Mão ao passar o mouse */
+    color: white; /* Cor do ícone */
+    margin-right: 20px; /* Distância do ícone até a borda direita */
+}
+
+/* =================================== */
 /* Estilos para os Botões             */
 /* =================================== */
 

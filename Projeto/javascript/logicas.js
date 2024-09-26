@@ -1,6 +1,6 @@
 // Função para copiar texto e adicionar animação
-function copiarTexto(index) {
-    navigator.clipboard.writeText(scriptsEspeciais[index]);
+function copiarTexto(texto) {
+    navigator.clipboard.writeText(texto);
 }
 
 // Função para exibir resultados
@@ -9,16 +9,19 @@ function mostrarResultados() {
     const resultadosDiv = document.getElementById("resultados");
     resultadosDiv.innerHTML = ""; // Limpa resultados anteriores
 
+    const pesquisa = input.value.toLowerCase(); // Converte o texto digitado para minúsculas
+
     scriptsSalvos.forEach((script, index) => {
-        if (script.includes(input.value)) {
+        if (script.toLowerCase().includes(pesquisa)) { // Converte cada script para minúsculas
             const resultadoDiv = document.createElement("div");
             resultadoDiv.className = "resultado";
-            resultadoDiv.textContent = script;
+            resultadoDiv.textContent = script; // Apenas o texto do script
 
             // Adiciona evento de clique para copiar texto e limpar caixinhas
             resultadoDiv.addEventListener("click", () => {
-                copiarTexto(index);
+                copiarTexto(script); // Copia o texto do scriptSalvos
                 resultadoDiv.classList.add("clicado"); // Adiciona a classe para animação
+                input.value = ""; // Limpa o input após o clique
 
                 // Após a animação, remover todas as caixinhas
                 setTimeout(() => {
